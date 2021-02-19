@@ -1,7 +1,7 @@
 <div class="row p-3">
-    <div class="col">
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At accusamus vel molestias voluptate optio
-            voluptatem molestiae quia maxime accusantium suscipit, unde sint, placeat ipsam eaque deserunt!
-            Beatae exercitationem unde deleniti?</p>
+    <div *ngFor="let result of results" class="col-md-4 col-sm-6">
+        <div class="card">
+            <img [src]="result.images.downsized_medium.url" [alt]="result.title" class="card-img-top">  
+        </div>
     </div>
 </div>
