@@ -25,6 +25,7 @@ export class GifsService {
 
   constructor( private http: HttpClient ) {
     this._search_list = JSON.parse(localStorage.getItem('history')!) || [];
+    this._results = JSON.parse(localStorage.getItem('last_results')!) || [];
   }
 
   add_term(query: string) {
@@ -40,6 +41,7 @@ export class GifsService {
     this.http.get<SearchGifsResponse>(`${this._giphy_url}?api_key=${this._api_key}&q=${query}&limit=10`)
       .subscribe( resp => {
         this._results = resp.data;
+        localStorage.setItem('last_results', JSON.stringify(this._results));
       } );
   }
 }

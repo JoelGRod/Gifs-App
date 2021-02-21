@@ -16,6 +16,10 @@ export class SidebarComponent {
 
   constructor(private gifs_service: GifsService) { }
 
+  public search( term: string ): void {
+    this.gifs_service.add_term(term);
+  }
+
 
 
 
