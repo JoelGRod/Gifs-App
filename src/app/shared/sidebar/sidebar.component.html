@@ -10,14 +10,11 @@
             {{term | titlecase}}
         </a>
     </div>
-    
+
     <hr class="text-white" />
 
     <h6 class="text-light">Gifs Limit</h6>
-    <select class="form-select form-select-sm" aria-label=".form-select-sm example" #limit 
-            (change)="set_gif_limit()">
-        <option selected value="10">10</option>
-        <option value="25">25</option>
-        <option value="50">50</option>
+    <select class="form-select form-select-sm" aria-label=".form-select-sm example" #limit (change)="set_gif_limit()">
+        <option *ngFor="let option of limit_options" [value]="option">{{option}}</option>
     </select>
 </div>

@@ -16,6 +16,10 @@ export class SidebarComponent {
     return this.gifs_service.search_list;
   }
 
+  get limit_options(): string[] {
+    return this.gifs_service.limit_options;
+  }
+
   constructor(private gifs_service: GifsService) { }
 
   public search( term: string ): void {

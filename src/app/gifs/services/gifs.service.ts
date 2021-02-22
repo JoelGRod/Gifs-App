@@ -12,6 +12,7 @@ export class GifsService {
 
   private _api_url: string = environment.api_url;
   private _api_key: string = environment.api_key;
+  private _limit_options: string[] = ['10', '25', '50', '100'];
   private _limit: string = '10';
 
   private _search_list: string[] = [];
@@ -23,6 +24,10 @@ export class GifsService {
 
   get results(): Gif[] {
     return [...this._results];
+  }
+
+  get limit_options(): string[] {
+    return [...this._limit_options];
   }
 
   set limit(new_limit: string) {
