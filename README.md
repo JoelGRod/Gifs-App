@@ -6,8 +6,11 @@ Application deployed in: https://infallible-cray-8fccc4.netlify.app/#
 
 Add the environment variables from environment.dist.ts to your environment.ts
 
-API_KEY from Giphy (you need an account - https://developers.giphy.com/)
-API_URL Giphy endpoint (see giphy docs - https://developers.giphy.com/docs/api/endpoint#search)
+*API_KEY from Giphy (you need an account - https://developers.giphy.com/)
+
+*API_URL Giphy endpoint (see giphy docs - https://developers.giphy.com/docs/api/endpoint#search)
+
+Based on the projects by Fernando Herrera - https://www.udemy.com/course/angular-fernando-herrera/
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.1.
 
