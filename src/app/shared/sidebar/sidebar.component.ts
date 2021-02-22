@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 // Services
 import { GifsService } from '../../gifs/services/gifs.service';
 
@@ -10,6 +10,8 @@ import { GifsService } from '../../gifs/services/gifs.service';
 })
 export class SidebarComponent {
 
+  @ViewChild('limit') limit!: ElementRef<HTMLInputElement>;
+
   get history(): string[] {
     return this.gifs_service.search_list;
   }
@@ -18,6 +20,10 @@ export class SidebarComponent {
 
   public search( term: string ): void {
     this.gifs_service.add_term(term);
+  }
+
+  public set_gif_limit(): void {
+    this.gifs_service.limit = this.limit.nativeElement.value;
   }
 
 

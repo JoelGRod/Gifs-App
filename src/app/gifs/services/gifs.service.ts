@@ -25,6 +25,10 @@ export class GifsService {
     return [...this._results];
   }
 
+  set limit(new_limit: string) {
+    this._limit = new_limit;
+  }
+
   constructor( private http: HttpClient ) {
     this._search_list = JSON.parse(localStorage.getItem('history')!) || [];
     this._results = JSON.parse(localStorage.getItem('last_results')!) || [];
