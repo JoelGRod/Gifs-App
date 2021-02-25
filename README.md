@@ -2,7 +2,7 @@
 
 This is a simple app for searching gifs.
 
-Application deployed in: https://gifs-app-8fccc4.netlify.app/
+Application deployed in: https://gifs-app-ef5830.netlify.app/
 
 Add the environment variables from environment.dist.ts to your environment.ts
 
